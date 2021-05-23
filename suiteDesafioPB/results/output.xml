@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.2 (Python 3.8.5 on linux)" generated="20210523 15:37:12.210" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="/home/paulohemm/Música/desafio-pb/suiteDesafioPB/tests">
+<suite id="s1-s1" name="testDesafioPB" source="/home/paulohemm/Música/desafio-pb/suiteDesafioPB/tests/testDesafioPB.robot">
+<test id="s1-s1-t1" name="Caso de Teste 01: Validar se o texto &quot;Hello World!&quot; é apresentado corretamente">
+<kw name="Abrir navegador" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210523 15:37:12.320" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210523 15:37:12.319" endtime="20210523 15:37:13.590"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210523 15:37:13.590" endtime="20210523 15:37:13.696"/>
+</kw>
+<status status="PASS" starttime="20210523 15:37:12.319" endtime="20210523 15:37:13.697"/>
+</kw>
+<kw name="Dado que estou na página &quot;Dynamically Loaded Page Elements&quot;" library="resource" sourcename="Dado que estou na página &quot;${subtitulo}&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210523 15:37:13.699" level="INFO">Opening url 'https://the-internet.herokuapp.com/dynamic_loading/1'</msg>
+<status status="PASS" starttime="20210523 15:37:13.698" endtime="20210523 15:37:20.383"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[contains(text(),'${subtitulo}')]</arg>
+<arg>timeout=10 seconds</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210523 15:37:20.383" endtime="20210523 15:37:20.395"/>
+</kw>
+<status status="PASS" starttime="20210523 15:37:13.697" endtime="20210523 15:37:20.395"/>
+</kw>
+<kw name="Quando eu clicar no botão &quot;Start&quot;" library="resource" sourcename="Quando eu clicar no botão &quot;${botao}&quot;">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[text()='${botao}']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210523 15:37:20.395" level="INFO">Clicking button 'xpath=//button[text()='Start']'.</msg>
+<status status="PASS" starttime="20210523 15:37:20.395" endtime="20210523 15:37:20.449"/>
+</kw>
+<status status="PASS" starttime="20210523 15:37:20.395" endtime="20210523 15:37:20.449"/>
+</kw>
+<kw name="E aguardar o carregamento do elemento" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=finish</arg>
+<arg>timeout=10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210523 15:37:20.450" endtime="20210523 15:37:25.683"/>
+</kw>
+<status status="PASS" starttime="20210523 15:37:20.449" endtime="20210523 15:37:25.684"/>
+</kw>
+<kw name="Então a página deve me devolver o texto &quot;Hello World!&quot;" library="resource" sourcename="Então a página deve me devolver o texto &quot;${texto}&quot;">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>id=finish</arg>
+<arg>${texto}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210523 15:37:25.687" level="INFO">Verifying element 'id=finish' contains exact text 'Hello World!'.</msg>
+<status status="PASS" starttime="20210523 15:37:25.686" endtime="20210523 15:37:25.738"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>id=finish</arg>
+<arg>filename=textoEsperado{index}.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20210523 15:37:25.810" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="textoEsperado1.png"&gt;&lt;img src="textoEsperado1.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210523 15:37:25.738" endtime="20210523 15:37:25.810"/>
+</kw>
+<status status="PASS" starttime="20210523 15:37:25.685" endtime="20210523 15:37:25.810"/>
+</kw>
+<kw name="Fechar navegador" library="resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210523 15:37:25.811" endtime="20210523 15:37:25.880"/>
+</kw>
+<status status="PASS" starttime="20210523 15:37:25.810" endtime="20210523 15:37:25.880"/>
+</kw>
+<status status="PASS" starttime="20210523 15:37:12.318" endtime="20210523 15:37:25.881"/>
+</test>
+<status status="PASS" starttime="20210523 15:37:12.226" endtime="20210523 15:37:25.882"/>
+</suite>
+<status status="PASS" starttime="20210523 15:37:12.211" endtime="20210523 15:37:25.885"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="testDesafioPB">Tests.testDesafioPB</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
