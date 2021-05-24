@@ -51,4 +51,4 @@ python -m robot -d ./results -v BROWSER:firefox tests
 
 
 ## Considerações
-- Tive uma incerteza enquanto os nomes se eram para ser estritamente iguais ao solicitado e por fim utilizei o botão sendo "Start" e o texto "Hello World!" por ser apenas uma troca de variável a implementação permaneceria a mesma neste caso.
+- Tive uma incerteza enquanto os nomes se eram para ser estritamente iguais ao solicitado e por fim utilizei o botão sendo "Start" e o texto "Hello World!" por ser apenas uma troca de variável a implementação permaneceria a mesma neste caso(salvo ressalva que o teste falharia para o caso não utilizado).
