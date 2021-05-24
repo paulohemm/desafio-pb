@@ -45,3 +45,10 @@ ou alternativamente:
 ```
 python -m robot -d ./results -v BROWSER:firefox tests 
 ```
+## Resultados
+![reportTeste](https://user-images.githubusercontent.com/54223200/119348859-cd815c00-bc73-11eb-8993-494ac7041801.gif)
+![logTeste](https://user-images.githubusercontent.com/54223200/119348869-cf4b1f80-bc73-11eb-861f-a86fd44cbbae.gif)
+
+
+## Considerações
+- Tive uma incerteza enquanto os nomes se eram para ser estritamente iguais ao solicitado e por fim utilizei o botão sendo "Start" e o texto "Hello World!" por ser apenas uma troca de variável a implementação permaneceria a mesma neste caso.
